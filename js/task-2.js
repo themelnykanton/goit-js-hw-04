@@ -1,8 +1,21 @@
 const calcAverageCalories = function (days) {
-  const caloriesArr = days.map((elem) => elem.calories);
+  // First solution
+  // const caloriesArr = days.map((elem) => elem.calories);
+
+  // return days.length !== 0
+  //   ? caloriesArr.reduce((acc, elem) => acc + elem, 0) / days.length
+  //   : 0
+  // ;
+
+  // Second solution
+  let totalCalories = 0;
+
+  for (const elem of days) {
+    totalCalories += elem.calories;
+  }
 
   return days.length !== 0
-    ? caloriesArr.reduce((acc, elem) => acc + elem, 0) / days.length
+    ? totalCalories / days.length
     : 0
   ;
 }

@@ -9,7 +9,7 @@ function isEnoughCapacity(products, containerSize) {
   const arr = [];
   let overall = 0;
 
-  for (value in products) {
+  for (const value in products) {
     arr.push(products[value]);
   }
   console.log(arr);
