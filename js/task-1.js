@@ -1,24 +1,24 @@
 function isEnoughCapacity(products, containerSize) {
   //First solution
   const values = Object.values(products);
-  const reduced = values.reduce((acc, elem) => elem + acc);
+  const reduced = values.reduce((acc, elem) => elem + acc, 0);
 
   return reduced <= containerSize;
 
   //Second solution
-  const arr = [];
-  let overall = 0;
+  // const arr = [];
+  // let overall = 0;
 
-  for (const value in products) {
-    arr.push(products[value]);
-  }
-  console.log(arr);
+  // for (const value in products) {
+  //   arr.push(products[value]);
+  // }
+  // console.log(arr);
 
-  for (const elem of arr) {
-    overall += elem;
-  }
+  // for (const elem of arr) {
+  //   overall += elem;
+  // }
 
-  return overall <= containerSize;
+  // return overall <= containerSize;
 }
 
 
